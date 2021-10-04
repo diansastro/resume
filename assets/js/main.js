@@ -181,11 +181,11 @@ onscroll(document, toggleBacktotop)
         spaceBetween: 60
     },
     640: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 80
     },
     992: {
-        slidesPerView: 4,
+        slidesPerView: 5,
         spaceBetween: 120
     }
 }
