@@ -82,7 +82,7 @@ var KTDatatableDataLocalDemo = function() {
                                 <i class="la la-cog"></i>\
                             </a>\
 						  	<div class="dropdown-menu dropdown-menu-right">\
-						    	<a class="dropdown-item" href="create_tps.html"><i class="la la-edit"></i>Edit / Lihat Detail</a>\
+						    	<a class="dropdown-item" href="detail_tps.html"><i class="la la-edit"></i>Edit / Lihat Detail</a>\
 						  	</div>\
 						</div>\
 						<a type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal" data-target="#kt_modal_1_' + row.recordId + '" title="Delete">\
