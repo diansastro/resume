@@ -15,21 +15,21 @@ am5.ready(function() {
             name: "Paslon 1",
             steps: 120000,
             pictureSettings: {
-                src: "https://www.amcharts.com/wp-content/uploads/2019/04/monica.jpg"
+                src: "https://raw.githubusercontent.com/diansastro/resume/master/livecount/assets/media/logos/ross.jpeg"
             }
         },
         {
             name: "Paslon 2",
             steps: 200000,
             pictureSettings: {
-                src: "https://www.amcharts.com/wp-content/uploads/2019/04/joey.jpg"
+                src: "https://raw.githubusercontent.com/diansastro/resume/master/livecount/assets/media/logos/monica.jpeg"
             }
         },
         {
             name: "Paslon 3",
             steps: 400000,
             pictureSettings: {
-                src: "https://www.amcharts.com/wp-content/uploads/2019/04/ross.jpg"
+                src: "https://raw.githubusercontent.com/diansastro/resume/master/livecount/assets/media/logos/joey.jpeg"
             }
         }
     ];
