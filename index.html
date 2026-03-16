@@ -1,555 +1,669 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Google Tag Manager -->
-        <script>
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-K8B2NV4');
-        </script>
-        <!-- End Google Tag Manager -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G14WHWZFEB"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-G14WHWZFEB');
-        </script>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="description">
-        <meta content="" name="keywords">
-        <meta name="google-site-verification" content="unwFTrBI7fUwbBHLDQS4kw8q3XJRIfgAHlZW3AocypQ" />
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KarsaLabs — IT Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/x-icon"  href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="theme-color" content="#4f6ef7"/>
+  <link rel="stylesheet" href="style.css"/>
 
-        <title>Maskoding</title>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
 
-        <link href="assets/img/favicon.png" rel="icon">
-        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#home" onclick="event.preventDefault();goTo('home')" class="nav-logo" aria-label="KarsaLabs">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 36" height="36" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="#4f6ef7"/>
+            <stop offset="55%"  stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <!-- Icon mark -->
+        <polygon points="13,3 23,10 13,17 3,10"  fill="url(#lg-nav)"/>
+        <polygon points="13,13 23,20 13,27 3,20" fill="url(#lg-nav)" opacity="0.4"/>
+        <!-- Wordmark: single text, two weights -->
+        <text font-family="Outfit,sans-serif" font-size="20" letter-spacing="-0.3" fill="url(#lg-nav)">
+          <tspan x="30" y="24" font-weight="800">Karsa</tspan><tspan font-weight="300">Labs</tspan>
+        </text>
+      </svg>
+    </a>
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <ul class="nav-links">
+      <li><a href="#services"     onclick="event.preventDefault();goTo('services')"     data-i18n="nav.services">Layanan</a></li>
+      <li><a href="#how"          onclick="event.preventDefault();goTo('how')"           data-i18n="nav.process">Proses</a></li>
+      <li><a href="#tech"         onclick="event.preventDefault();goTo('tech')"          data-i18n="nav.tech">Teknologi</a></li>
+      <li><a href="#portfolio"    onclick="event.preventDefault();goTo('portfolio')"     data-i18n="nav.portfolio">Portfolio</a></li>
 
-        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8B2NV4"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <header id="header" class="header fixed-top">
-            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-                <a href="#hero" class="logo d-flex align-items-center">
-                    <img src="assets/img/favicon.png" alt="">
-                    <!--span>Maskoding</span-->
-                </a>
-                <nav id="navbar" class="navbar">
-                    <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                        <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-                        <!--li><a class="nav-link scrollto" href="#team">Team</a></li-->
-                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-toggle" onclick="toggleLang()" title="Switch language">
+        <span class="lang-opt" id="langID">🇮🇩</span>
+        <span class="lang-sep"></span>
+        <span class="lang-opt" id="langEN">🇬🇧</span>
+      </div>
+      <button class="nav-cta" onclick="goTo('contact')" data-i18n="nav.cta">Konsultasi Gratis</button>
+    </div>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services"     onclick="event.preventDefault();toggleMenu();goTo('services')"     data-i18n="nav.services">Layanan</a>
+    <a href="#how"          onclick="event.preventDefault();toggleMenu();goTo('how')"           data-i18n="nav.process">Proses</a>
+    <a href="#tech"         onclick="event.preventDefault();toggleMenu();goTo('tech')"          data-i18n="nav.tech">Teknologi</a>
+    <a href="#portfolio"    onclick="event.preventDefault();toggleMenu();goTo('portfolio')"     data-i18n="nav.portfolio">Portfolio</a>
+
+    <a href="#contact"      onclick="event.preventDefault();toggleMenu();goTo('contact')"       data-i18n="nav.cta">Konsultasi Gratis</a>
+    <div class="mobile-lang-row">
+      <button id="mobileLangID" onclick="applyTranslations('id')">🇮🇩 Indonesia</button>
+      <button id="mobileLangEN" onclick="applyTranslations('en')">🇬🇧 English</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.badge">IT Solution Terpercaya</span>
+      </div>
+
+      <h1>
+        <span data-i18n="hero.title">Transformasi Digital</span><br>
+        <span class="gradient-text" data-i18n="hero.titleAccent">Bisnis Anda</span>
+      </h1>
+
+      <p data-i18n="hero.desc">
+        Kami membangun aplikasi web &amp; mobile berkualitas tinggi, serta
+        menyediakan konsultasi IT strategis untuk mendorong pertumbuhan
+        bisnis Anda ke level berikutnya.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="goTo('services')" data-i18n="hero.btnServices">Lihat Layanan</button>
+        <button class="btn-ghost" onclick="goTo('portfolio')">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <span data-i18n="hero.btnPortfolio">Lihat Portfolio</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating cards -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="fcard fcard-main">
+        <div class="fcard-icon-row">
+          <div class="fcard-icon blue">🌐</div>
+          <div>
+            <div class="fcard-label" data-i18n="hero.card.activeProject">Proyek Aktif</div>
+            <div class="fcard-title">Web Development</div>
+          </div>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>
+        <div class="progress-label" data-i18n="hero.card.progress">78% selesai</div>
+      </div>
+
+      <div class="fcard fcard-stat1">
+        <div class="fcard-label" data-i18n="hero.card.happyClients">Klien Puas</div>
+        <div class="fcard-big">20+</div>
+        <div class="fcard-sub" data-i18n="hero.card.successProjects">Proyek berhasil</div>
+      </div>
+
+      <div class="fcard fcard-stat2">
+        <div class="fcard-icon-row">
+          <div class="fcard-icon purple">📱</div>
+          <div>
+            <div class="fcard-label">Mobile Apps</div>
+            <div class="fcard-title gradient-text">iOS &amp; Android</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       STATS
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- ══════════════════════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="sec-header">
+      <span class="sec-tag" data-i18n="services.tag">Layanan Kami</span>
+      <h2 class="sec-title" data-i18n="services.title">Solusi Digital Lengkap</h2>
+      <p class="sec-sub" data-i18n="services.subtitle">Dari pengembangan aplikasi hingga konsultasi strategis, kami siap menjadi mitra teknologi andalan Anda.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <article class="svc-card">
+        <div class="svc-ico svc-ico--web">🌐</div>
+        <h3>Web Development</h3>
+        <p data-i18n="services.web.desc">Kami membangun aplikasi web modern yang responsif, cepat, dan skalabel menggunakan teknologi terkini untuk kebutuhan bisnis Anda.</p>
+        <ul class="feat-list">
+          <li><span class="dot-bullet"></span><span data-i18n="services.web.f1">Landing Page &amp; Company Profile</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.web.f2">E-commerce &amp; Marketplace</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.web.f3">SaaS &amp; Web Application</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.web.f4">API Development &amp; Integration</span></li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ico svc-ico--mobile">📱</div>
+        <h3>Mobile Development</h3>
+        <p data-i18n="services.mobile.desc">Kami membuat aplikasi mobile iOS dan Android yang intuitif, berperforma tinggi, dan memberikan pengalaman pengguna yang luar biasa.</p>
+        <ul class="feat-list">
+          <li><span class="dot-bullet"></span><span data-i18n="services.mobile.f1">Native iOS &amp; Android App</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.mobile.f2">Cross-platform (React Native / Flutter)</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.mobile.f3">UI/UX Design &amp; Prototyping</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.mobile.f4">App Store &amp; Play Store Publishing</span></li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-ico svc-ico--consult">💡</div>
+        <h3>IT Consultant</h3>
+        <p data-i18n="services.consult.desc">Tim konsultan berpengalaman kami membantu Anda merancang strategi teknologi yang tepat untuk mencapai tujuan bisnis secara efisien.</p>
+        <ul class="feat-list">
+          <li><span class="dot-bullet"></span><span data-i18n="services.consult.f1">IT Strategy &amp; Roadmap</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.consult.f2">Digital Transformation</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.consult.f3">System Architecture Design</span></li>
+          <li><span class="dot-bullet"></span><span data-i18n="services.consult.f4">Security Audit &amp; Compliance</span></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       HOW IT WORKS
+  ══════════════════════════════════════════════════════ -->
+  <section id="how">
+    <div class="sec-header">
+      <span class="sec-tag" data-i18n="how.tag">Proses Kerja</span>
+      <h2 class="sec-title" data-i18n="how.title">Bagaimana Kami Bekerja?</h2>
+      <p class="sec-sub" data-i18n="how.subtitle">Proses transparan dan terstruktur untuk memastikan proyek Anda selesai tepat waktu dan sesuai harapan.</p>
+    </div>
+
+    <div class="steps-wrap">
+      <div class="step-row">
+        <div class="step-aside"><div class="step-circle">01</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <span class="step-lbl" data-i18n="how.s1.label">Tahap Pertama</span>
+          <h4 data-i18n="how.s1.title">Konsultasi &amp; Discovery</h4>
+          <p data-i18n="how.s1.desc">Kami mendengar kebutuhan bisnis Anda secara mendalam dan mengidentifikasi solusi terbaik yang sesuai dengan tujuan dan anggaran Anda.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-aside"><div class="step-circle">02</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <span class="step-lbl" data-i18n="how.s2.label">Tahap Kedua</span>
+          <h4 data-i18n="how.s2.title">Perencanaan &amp; Desain</h4>
+          <p data-i18n="how.s2.desc">Tim kami merancang arsitektur sistem dan prototype UI/UX yang detail agar semua pihak memiliki visi yang sama sebelum pengembangan dimulai.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-aside"><div class="step-circle">03</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <span class="step-lbl" data-i18n="how.s3.label">Tahap Ketiga</span>
+          <h4 data-i18n="how.s3.title">Pengembangan Agile</h4>
+          <p data-i18n="how.s3.desc">Pengembangan dilakukan secara iteratif dengan sprint dua mingguan agar Anda selalu mendapat update progres secara transparan dan real-time.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-aside"><div class="step-circle">04</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <span class="step-lbl" data-i18n="how.s4.label">Tahap Keempat</span>
+          <h4 data-i18n="how.s4.title">Testing &amp; QA</h4>
+          <p data-i18n="how.s4.desc">Setiap fitur diuji secara menyeluruh — fungsional, performa, dan keamanan — untuk memastikan kualitas produk sebelum diluncurkan ke publik.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-aside"><div class="step-circle">05</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <span class="step-lbl" data-i18n="how.s5.label">Tahap Kelima</span>
+          <h4 data-i18n="how.s5.title">Deploy &amp; Launch</h4>
+          <p data-i18n="how.s5.desc">Produk diluncurkan ke production dengan zero-downtime deployment, monitoring real-time, dan dokumentasi lengkap untuk tim Anda.</p>
+        </div>
+      </div>
+      <div class="step-row step-row--last">
+        <div class="step-aside"><div class="step-circle">06</div></div>
+        <div class="step-content">
+          <span class="step-lbl" data-i18n="how.s6.label">Tahap Keenam</span>
+          <h4 data-i18n="how.s6.title">Maintenance &amp; Support</h4>
+          <p data-i18n="how.s6.desc">Dukungan purna jual 24/7 untuk memastikan aplikasi Anda selalu berjalan optimal, aman, dan siap berkembang sesuai kebutuhan bisnis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       TECH STACK
+  ══════════════════════════════════════════════════════ -->
+  <section id="tech">
+    <div class="sec-header">
+      <span class="sec-tag" data-i18n="tech.tag">Teknologi</span>
+      <h2 class="sec-title" data-i18n="tech.title">Tech Stack Modern</h2>
+      <p class="sec-sub" data-i18n="tech.subtitle">Kami menggunakan teknologi terdepan yang telah terbukti menghadirkan solusi berkualitas enterprise.</p>
+    </div>
+
+    <div class="tech-wrap">
+      <div class="tech-grid" id="techGrid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       PORTFOLIO
+  ══════════════════════════════════════════════════════ -->
+  <section id="portfolio">
+    <div class="sec-header">
+      <span class="sec-tag" data-i18n="portfolio.tag">Portfolio</span>
+      <h2 class="sec-title" data-i18n="portfolio.title">Karya Terbaik Kami</h2>
+      <p class="sec-sub" data-i18n="portfolio.subtitle">Setiap proyek adalah bukti komitmen kami terhadap kualitas dan inovasi tanpa kompromi.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="port-filters">
+      <button class="port-filter active" onclick="filterPortfolio(this,'all')"    data-i18n="portfolio.filter.all">Semua</button>
+      <button class="port-filter"        onclick="filterPortfolio(this,'web')"    data-i18n="portfolio.filter.web">Web</button>
+      <button class="port-filter"        onclick="filterPortfolio(this,'mobile')" data-i18n="portfolio.filter.mobile">Mobile</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- 1 · Ismut Mobile -->
+      <div class="port-card" data-type="mobile">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p1-ismut-mobile.webp" alt="Ismut Fitomedika Android App" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--mobile">Android</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Healthcare</span>
+          <h3>Ismut Fitomedika App</h3>
+          <p>Sistem absensi dengan dukungan face recognition dan tanda tangan digital.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Kotlin</span>
+            <span class="port-tech-tag">MVP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 · Ismut Web -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p2-ismut-web.webp" alt="Ismut Fitomedika Dashboard" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Healthcare</span>
+          <h3>Ismut Fitomedika Dashboard</h3>
+          <p>Dashboard management terintegrasi untuk Ismut Mobile Apps.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Spring</span>
+            <span class="port-tech-tag">Java</span>
+            <span class="port-tech-tag">MySQL</span>
+            <span class="port-tech-tag">OAuth2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 · MPS Group -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p3-mps.webp" alt="Megahputra Sejahtera Website" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Automotive</span>
+          <h3>Megahputra Sejahtera</h3>
+          <p>Management konten Megahputra mencakup Showroom, Hotel, dan Industri.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Grails</span>
+            <span class="port-tech-tag">Groovy</span>
+            <span class="port-tech-tag">MySQL</span>
+            <span class="port-tech-tag">Spring</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 · Toko Leonardo -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p4-tokoleo.webp" alt="CV Leonardo" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Retail</span>
+          <h3>CV Leonardo</h3>
+          <p>Sistem management transaksi pembelian, penjualan, pajak, dan pengeluaran bulanan.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">PHP</span>
+            <span class="port-tech-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 · Fipoproperty -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p5-fipo.webp" alt="Fipoproperty" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Property</span>
+          <h3>Fipoproperty</h3>
+          <p>Website katalog properti publik untuk mempermudah proses penjualan.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Grails</span>
+            <span class="port-tech-tag">Groovy</span>
+            <span class="port-tech-tag">Spring Boot</span>
+            <span class="port-tech-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 · Vaksin Dr Bob -->
+      <div class="port-card" data-type="mobile">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p6-drbob.webp" alt="Vaksin Dr Bob" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--mobile">Android</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Healthcare</span>
+          <h3>Vaksin Dr. Bob</h3>
+          <p>Aplikasi vaksinasi anak dengan fitur antrian digital dan pembayaran online.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Java</span>
+            <span class="port-tech-tag">Google Pay</span>
+            <span class="port-tech-tag">Maps API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 · Smart Faculty Mobile -->
+      <div class="port-card" data-type="mobile">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p7-uh-mobile.webp" alt="Smart Faculty UH Mobile" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--mobile">Android</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Education</span>
+          <h3>Smart Faculty UH</h3>
+          <p>Aplikasi penunjang KBM — absensi, ujian, skripsi, tesis & informasi FEB Unhas.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Kotlin</span>
+            <span class="port-tech-tag">MVP</span>
+            <span class="port-tech-tag">Firebase
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 · Smart Faculty Web -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p8-uh-web.webp" alt="Smart Faculty UH Web" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Education</span>
+          <h3>Smart Faculty UH Dashboard</h3>
+          <p>Web dashboard terintegrasi dengan mobile app untuk manajemen KBM FEB Unhas.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">Spring Boot</span>
+            <span class="port-tech-tag">Thymeleaf</span>
+            <span class="port-tech-tag">OAuth2</span>
+            <span class="port-tech-tag">Nginx</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 · Kandangin -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p9-kandangin.webp" alt="Kandangin.com" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Marketplace</span>
+          <h3>Kandangin.com</h3>
+          <p>Katalog sapi online dengan foto, video, berat, dan harga untuk kemudahan pembeli.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">PHP</span>
+            <span class="port-tech-tag">MySQL</span>
+            <span class="port-tech-tag">jQuery</span>
+            <span class="port-tech-tag">Canvas API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 · Koperasi MBG -->
+      <div class="port-card" data-type="web">
+        <div class="port-thumb port-thumb--img">
+          <img src="images/p10-koperasi.webp" alt="Koperasi MBG" loading="lazy"/>
+          <!-- <span class="port-type-badge port-type-badge--web">Web</span> -->
+        </div>
+        <div class="port-body">
+          <span class="port-badge">Accounting</span>
+          <h3>Koperasi MBG</h3>
+          <p>Dashboard manajemen keuangan, barang, dan jasa koperasi pengolahan makanan.</p>
+          <div class="port-tech">
+            <span class="port-tech-tag">PHP</span>
+            <span class="port-tech-tag">MySQL</span>
+            <span class="port-tech-tag">jQuery</span>
+            <span class="port-tech-tag">Vanilla JS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- ══════════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-wrap">
+
+      <!-- Left: info -->
+      <div class="contact-info">
+        <span class="sec-tag" data-i18n="contact.tag">Hubungi Kami</span>
+        <h2 data-i18n="contact.heading">Siap Memulai Proyek <span class="gradient-text" data-i18n="contact.headingAccent">Impian Anda?</span></h2>
+        <p data-i18n="contact.subtitle">Konsultasikan kebutuhan teknologi Anda bersama kami secara gratis. Tim ahli kami siap memberikan solusi terbaik untuk bisnis Anda.</p>
+
+        <div class="cinfo-list">
+          <div class="cinfo-item">
+            <div class="cinfo-ico">📍</div>
+            <div>
+              <div class="cinfo-lbl" data-i18n="contact.info.addressLabel">Alamat</div>
+              <div class="cinfo-val">Jl Perintis Kemerdekaan KM 15 No.14 A
+Biringkanaya, Kota Makassar, Sulawesi Selatan 90243 </div>
             </div>
-        </header>
-        <section id="hero" class="hero d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up">We offer modern solutions for growing your bussines</h1>
-                        <h2 data-aos="fade-up" data-aos-delay="400">Need a super App to growth your bussnines?</h2>
-                        <div data-aos="fade-up" data-aos-delay="600">
-                            <div class="text-center text-lg-start">
-                                <a href="#contact" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>Let's Talk</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-                    </div>
-                </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-ico">📞</div>
+            <div>
+              <div class="cinfo-lbl" data-i18n="contact.info.phoneLabel">Telepon</div>
+              <div class="cinfo-val">+62 823-4657-8773</div>
             </div>
-        </section>
-        <main id="main">
-            <section id="about" class="about">
-                <div class="container" data-aos="fade-up">
-                    <div class="row gx-0">
-                        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                            <div class="content">
-                                <h2>About Us</h2>
-                                <p>Maskoding is a Information Technology Services, helped multiple clients from small medium businesses to big brands from various industry to create their Website / Mobile Apps including design & development.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="services" class="services">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Services</h2>
-                        <p>Here What We Can do For You</p>
-                    </header>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="box" data-aos="fade-up" data-aos-delay="200">
-                                <img src="assets/img/values-1.png" class="img-fluid" alt="">
-                                <h3>Web App Development</h3>
-                                <p>Design, Development, Domain and Hosting services your Web Application</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mt-4 mt-lg-0">
-                            <div class="box" data-aos="fade-up" data-aos-delay="600">
-                                <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                                <h3>Mobile App Development</h3>
-                                <p>Design, Development and Integrate your Web-Mobile App (Android or iOS)</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mt-4 mt-lg-0">
-                            <div class="box" data-aos="fade-up" data-aos-delay="400">
-                                <img src="assets/img/values-2.png" class="img-fluid" alt="">
-                                <h3>IT Consultant</h3>
-                                <p>Bussiness IT Solution, Online Dashboard, Search Engine Optimation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="portfolio" class="portfolio">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Portfolio</h2>
-                        <p>Check Our Latest Work</p>
-                    </header>
-                    <div class="row" data-aos="fade-up" data-aos-delay="100">
-                        <div class="col-lg-12 d-flex justify-content-center">
-                            <ul id="portfolio-flters">
-                                <li data-filter="*" class="filter-active">All</li>
-                                <li data-filter=".filter-web">Web</li>
-                                <li data-filter=".filter-app">Mobile</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/ismutmobile.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Ismut Fitomedika Mobile App</h4>
-                                    <p>Mobile App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/ismutmobile.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Ismut Fitomedika Mobile App"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/ismutweb.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Ismut Fitomedika Admin Dashboard</h4>
-                                    <p>Web App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/ismutweb.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Ismut Fitomedika Admin Dashboard"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/uh-mobile.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Smart Faculty</h4>
-                                    <p>Mobile App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/uh-mobile.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Smart Faculty Hasanuddin Univrsity"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/mps.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Megahputra Group</h4>
-                                    <p>Web</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/mps.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Megahputra Group Website"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/uh-web.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Smart Faculty</h4>
-                                    <p>Web App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/uh-web.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Smart Faculty Hasanuddin University"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/fipo.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Fipo Property</h4>
-                                    <p>Web App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/fipo.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Fipo Property Web Application"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/tokoleo.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Toko Leonardo</h4>
-                                    <p>Web App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/tokoleo.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Toko Leonardo Web App"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="portfolio-wrap">
-                                <img src="assets/img/portfolio/drbob.png" class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Vaksinn Dr Bob</h4>
-                                    <p>Mobile App</p>
-                                    <div class="portfolio-links">
-                                        <a href="assets/img/portfolio/drbob.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Klinik Dr Bob"><i class="bi bi-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- <section id="testimonials" class="testimonials">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Testimonials</h2>
-                        <p>What they are saying about us</p>
-                    </header>
-                    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
-                                    <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                                    </p>
-                                    <div class="profile mt-auto">
-                                        <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                        <h3>Saul Goodman</h3>
-                                        <h4>Ceo &amp; Founder</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                    </div>
-                                    <p>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                    </p>
-                                    <div class="profile mt-auto">
-                                        <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                        <h3>Sara Wilsson</h3>
-                                        <h4>Designer</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-item">
-                                    <div class="stars">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                    <p>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    </p>
-                                    <div class="profile mt-auto">
-                                        <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                        <h3>Jena Karlis</h3>
-                                        <h4>Store Owner</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section> -->
-            <section id="clients" class="clients">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Our Clients</h2>
-                        <p>Our Recent Clients</p>
-                    </header>
-                    <div class="clients-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
-                            <div class="swiper-slide"><img src="assets/img/mps.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/uh.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/tl.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/fipo-logo.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/boblogo.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/ismut-logo.png" class="img-fluid" alt=""></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
-            <section id="clients" class="clients">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Tech Stack</h2>
-                        <p>Our Technology</p>
-                    </header>
-                    <div class="clients-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
-                            <div class="swiper-slide"><img src="assets/img/java.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/spring.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/thymeleaf.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/kotlin.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/mysql.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/ubuntu.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/nginx.png" class="img-fluid" alt=""></div>
-                            <div class="swiper-slide"><img src="assets/img/github.png" class="img-fluid" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--section id="team" class="team">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Team</h2>
-                        <p>Our hard working team</p>
-                    </header>
-                    <div class="row gy-4">
-                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h4>Walter White</h4>
-                                    <span>Chief Executive Officer</span>
-                                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="assets/img/team-2.jpg" class="img-fluid" alt="">
-                                    <div class="social">
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
-                                    </div>
-                                </div>
-                                <div class="member-info">
-                                    <h4>Sarah Jhonson</h4>
-                                    <span>Product Manager</span>
-                                    <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section-->
-            <section id="contact" class="contact">
-                <div class="container" data-aos="fade-up">
-                    <header class="section-header">
-                        <h2>Contact</h2>
-                        <p>Contact Us</p>
-                    </header>
-                    <div class="row gy-8">
-                        <div class="col-lg-12">
-                            <div class="row gy-4">
-                                <div class="col-md-3">
-                                    <div class="info-box">
-                                        <i class="bi bi-geo-alt"></i>
-                                        <h3>Address</h3>
-                                        <!--p><a href="https://goo.gl/maps/rdKiqXWxE3RCN9gy7" target="_blank" style="color: #444444;">Porot, Getas<br>Kaloran, Temanggung 56282</a>
-                                        </p-->
-                                        <p>
-                                            <a href="https://bit.ly/3Hk3AxY" target="_blank" style="color: #444444;">
-                                               Jl Perintis Kemerdekaan KM 15 No.14A Makassar
-                                            </a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="info-box">
-                                        <i class="bi bi-telephone"></i>
-                                        <h3>Call Us</h3>
-                                        <p>Mobile 1: 
-                                            <a href="https://wa.me/+6282346578773" style="color: #444444;">+62 82346578773</a>
-                                            <br>
-                                        </p>
-                                        <p>Mobile 2:
-                                            <a href="https://wa.me/+6281241619999" style="color: #444444;">+62 81241619999</a>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="info-box">
-                                        <i class="bi bi-envelope"></i>
-                                        <h3>Email Us</h3>
-                                        <p>
-                                            <a href="mailto:widiytk@gmail.com" style="color: #444444;">widiytk@gmail.com</a>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <a href="mailto:infomaskoding@gmail.com" style="color: #444444;">infomaskoding@gmail.com</a>
-                                            <br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="info-box">
-                                        <i class="bi bi-clock"></i>
-                                        <h3>Open Hours</h3>
-                                        <p>Monday - Friday<br>9:00AM - 05:00PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer id="footer" class="footer">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row gy-4">
-                        <div class="col-lg-5 col-md-12 footer-info">
-                            <a href="#hero" class="logo d-flex align-items-center">
-                                <img src="assets/img/logo.png" alt="">
-                                <span>Maskoding</span>
-                            </a>
-                            <p>Information Technology Services, helped multiple clients from small medium businesses to big brands from various industry to create their Website / Mobile Apps including design & development.</p>
-                            <div class="social-links mt-3">
-                                <a href="https://github.com/diansastro" class="twitter" target="_blank"><i class="bi bi-github"></i></a>
-                                <a href="https://www.linkedin.com/in/widiyantoko/" class="linkedin" target="_blank"><i class="bi bi-linkedin bx bxl-linkedin"></i></a>
-                                <a href="https://www.youtube.com/channel/UC5HqufiQu5DOmsXUBA2UNkA" class="facebook" target="_blank"><i class="bi bi-youtube"></i></a>
-                                <a href="https://instagram.com/widiytk" class="instagram" target="_blank"><i class="bi bi-instagram bx bxl-instagram"></i></a>
-                                <a href="https://facebook.com/widiytk" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-6 footer-links">
-                            <h4>Useful Links</h4>
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#portfolio">Portfolio</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-2 col-6 footer-links">
-                            <h4>Our Services</h4>
-                            <ul>
-                                <li><i class="bi bi-chevron-right"></i> <a>Web Design</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a>Web Development</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a>Mobile App Development</a></li>
-                                <li><i class="bi bi-chevron-right"></i> <a>IT Consultant</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                            <h4>Contact Us</h4>
-                            <p>Kompleks Manggala Junction <br>
-                                Jl Perintis Kemerdekaan KM 15 No.14 A<br>
-                                Biringkanaya, Kota Makassar, Sulawesi Selatan 90243 <br><br>
-                                <strong>Phone:</strong> +62 82346578773<br>
-                                <strong>Email:</strong> infomaskoding@gmail.com<br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="cinfo-item">
+            <div class="cinfo-ico">✉️</div>
+            <div>
+              <div class="cinfo-lbl">Email</div>
+              <!-- <div class="cinfo-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9d0d7dfd6d4d8cad2d6ddd0d7def9ded4d8d0d597dad6d4">[email&#160;protected]</a></div> -->
+              <div class="cinfo-val"><a>infomaskoding@gmail.com</a></div>
             </div>
-            <div class="container">
-                <div class="copyright">&copy; Copyright <strong><span>Maskoding</span></strong>. All Rights Reserved</div>
-                <div class="credits">
-                    Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
-                </div>
-            </div>
-        </footer>
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+          </div>
+        </div>
+      </div>
 
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
-</html>
+      <!-- Right: form -->
+      <div class="contact-form-wrap">
+        <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label data-i18n="contact.form.nameLabel">Nama</label>
+              <input type="text" id="f-name" class="form-input"
+                     data-i18n-placeholder="contact.form.name" placeholder="Nama Anda" required/>
+              <span class="form-err" id="err-name"></span>
+            </div>
+            <div class="form-group">
+              <label data-i18n="contact.form.companyLabel">Perusahaan</label>
+              <input type="text" id="f-company" class="form-input"
+                     data-i18n-placeholder="contact.form.company" placeholder="Perusahaan"/>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="f-email" class="form-input"
+                     data-i18n-placeholder="contact.form.email" placeholder="Email Anda" required/>
+              <span class="form-err" id="err-email"></span>
+            </div>
+            <div class="form-group">
+              <label>WhatsApp</label>
+              <input type="tel" id="f-wa" class="form-input"
+                     data-i18n-placeholder="contact.form.whatsapp" placeholder="Nomor WhatsApp"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="contact.form.serviceLabel">Layanan yang Dibutuhkan</label>
+            <select id="f-service" class="form-input form-select">
+              <option value="" data-i18n="contact.form.serviceDefault">Pilih layanan...</option>
+              <option value="web">Web Development</option>
+              <option value="mobile">Mobile Development</option>
+              <option value="consult">IT Consultant</option>
+              <option value="other" data-i18n="contact.form.serviceOther">Lainnya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="contact.form.messageLabel">Pesan</label>
+            <textarea id="f-message" class="form-input form-textarea" rows="5"
+                      data-i18n-placeholder="contact.form.message"
+                      placeholder="Ceritakan kebutuhan Anda..." required></textarea>
+            <span class="form-err" id="err-message"></span>
+          </div>
+
+          <!-- Submit button + states -->
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-label" data-i18n="contact.form.submit">Kirim &amp; Mulai Konsultasi</span>
+            <span class="btn-spinner" style="display:none">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </span>
+          </button>
+
+          <!-- Feedback messages -->
+          <div class="form-feedback form-feedback--success" id="successMsg" style="display:none">
+            <span>✅</span>
+            <span data-i18n="contact.form.successMsg">Pesan berhasil dikirim! Kami akan menghubungi Anda segera.</span>
+          </div>
+          <div class="form-feedback form-feedback--error" id="errorMsg" style="display:none">
+            <span>❌</span>
+            <span data-i18n="contact.form.errorMsg">Gagal mengirim pesan. Silakan coba lagi atau hubungi kami langsung.</span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER — edit via footer.html lalu paste di sini
+  ══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 36" height="34" aria-label="KarsaLabs">
+            <defs>
+              <linearGradient id="lg-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#4f6ef7"/>
+                <stop offset="55%"  stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+            <polygon points="13,3 23,10 13,17 3,10"  fill="url(#lg-footer)"/>
+            <polygon points="13,13 23,20 13,27 3,20" fill="url(#lg-footer)" opacity="0.4"/>
+            <text font-family="Outfit,sans-serif" font-size="20" letter-spacing="-0.3" fill="url(#lg-footer)">
+              <tspan x="30" y="24" font-weight="800">Karsa</tspan><tspan font-weight="300">Labs</tspan>
+            </text>
+          </svg>
+        </div>
+        <p data-i18n="footer.desc">Mitra teknologi terpercaya untuk transformasi digital bisnis Anda. Kami membangun solusi masa depan hari ini.</p>
+        <div class="footer-socials">
+          <a class="social-ico" aria-label="Twitter">𝕏</a>
+          <a class="social-ico" aria-label="LinkedIn">in</a>
+          <a class="social-ico" aria-label="Facebook">f</a>
+          <a class="social-ico" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.col.services">Layanan</h5>
+        <ul>
+          <li><a>Web Development</a></li>
+          <li><a>Mobile Development</a></li>
+          <li><a data-i18n="footer.consulting">IT Consulting</a></li>
+          <li><a>UI/UX Design</a></li>
+          <!-- <li><a href="#" data-i18n="footer.cloud">Cloud Services</a></li> -->
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.col.company">Perusahaan</h5>
+        <ul>
+          <li><a data-i18n="footer.about">Tentang Kami</a></li>
+          <li><a data-i18n="footer.team">Tim Kami</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>Blog</a></li>
+          <!-- <li><a href="#" data-i18n="footer.career">Karir</a></li> -->
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5 data-i18n="footer.col.contact">Kontak</h5>
+        <ul>
+          <li><a>📍 Makassar, Indonesia</a></li>
+          <li><a href="tel:+628123456789">📞 +62 823-4657-8773</a></li>
+          <!-- <li><a href="/cdn-cgi/l/email-protection#3851565e5755594b53575c51565f785f55595154165b5755">✉️ <span class="__cf_email__" data-cfemail="c5acaba3aaa8a4b6aeaaa1acaba285a2a8a4aca9eba6aaa8">[email&#160;protected]</span></a></li> -->
+          <li><a href="mailto:infomaskoding@gmail.com">✉️ <span>infomaskoding@gmail.com</span></a></li>
+          <li><a href="https://wa.me/+6282346578773" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer-inner -->
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.copy">© 2025 KarsaLabs IT Solutions. A

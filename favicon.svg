@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#4f6ef7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Top rhombus -->
+  <polygon points="32,4 60,22 32,40 4,22" fill="url(#g1)"/>
+  <!-- Bottom rhombus (semi-transparent) -->
+  <polygon points="32,24 60,42 32,60 4,42" fill="url(#g2)" opacity="0.55"/>
+</svg>
